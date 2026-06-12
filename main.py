@@ -2,13 +2,13 @@ import pickle
 import os
 import pandas as pd
 from tqdm import tqdm
-from src.models import *
-from src.constants import *
-from src.plotting import *
-from src.pot import *
-from src.utils import *
-from src.diagnosis import *
-from src.merlin import *
+from tranad.src.models import *
+from tranad.src.constants import *
+from tranad.src.plotting import *
+from tranad.src.pot import *
+from tranad.src.utils import *
+from tranad.src.diagnosis import *
+from tranad.src.merlin import *
 from torch.utils.data import Dataset, DataLoader, TensorDataset
 import torch.nn as nn
 from time import time
@@ -54,7 +54,7 @@ def save_model(model, optimizer, scheduler, epoch, accuracy_list):
         'accuracy_list': accuracy_list}, file_path)
 
 def load_model(modelname, dims):
-	import src.models
+	import tranad.src.models
 	model_class = getattr(src.models, modelname)
 	model = model_class(dims).double()
 	optimizer = torch.optim.AdamW(model.parameters() , lr=model.lr, weight_decay=1e-5)

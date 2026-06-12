@@ -1,5 +1,5 @@
-from src.parser import *
-from src.folderconstants import *
+from tranad.src.parser import *
+from tranad.src.folderconstants import *
 
 # Threshold parameters
 lm_d = {

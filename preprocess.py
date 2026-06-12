@@ -4,7 +4,7 @@ import pandas as pd
 import numpy as np
 import pickle
 import json
-from src.folderconstants import *
+from tranad.src.folderconstants import *
 from shutil import copyfile
 
 datasets = ['synthetic', 'SMD', 'SWaT', 'SMAP', 'MSL', 'WADI', 'MSDS', 'UCR', 'MBA', 'NAB']
